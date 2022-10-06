@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "usemeru",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-usemeru-dev-185146-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/d5c591b3bae49f185f490dfbe7fca3626f72ece7"
+}

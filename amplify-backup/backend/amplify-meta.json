@@ -1,0 +1,85 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-usemeru-dev-170534-authRole",
+      "UnauthRoleArn": "arn:aws:iam::295758170778:role/amplify-usemeru-dev-170534-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::295758170778:role/amplify-usemeru-dev-170534-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-usemeru-dev-170534-deployment",
+      "UnauthRoleName": "amplify-usemeru-dev-170534-unauthRole",
+      "StackName": "amplify-usemeru-dev-170534",
+      "StackId": "arn:aws:cloudformation:us-west-2:295758170778:stack/amplify-usemeru-dev-170534/710f53a0-3f8a-11ed-bdba-0aa067a1e6f9",
+      "AmplifyAppId": "d3elfo0zzi4au0"
+    }
+  },
+  "auth": {
+    "usemeruce6dd2ef": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-usemeru-dev-170534-deployment/amplify-cfn-templates/auth/usemeruce6dd2ef-cloudformation-template.json",
+        "logicalId": "authusemeruce6dd2ef"
+      },
+      "lastPushTimeStamp": "2022-10-03T22:45:48.742Z"
+    },
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "usemeruce6dd2ef",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ],
+      "lastPushTimeStamp": "2022-10-03T22:45:48.557Z",
+      "userPoolGroups": {
+        "service": "Cognito-UserPool-Groups",
+        "providerPlugin": "awscloudformation",
+        "dependsOn": [
+          {
+            "category": "auth",
+            "resourceName": "usemeruce6dd2ef",
+            "attributes": [
+              "UserPoolId",
+              "AppClientIDWeb",
+              "AppClientID",
+              "IdentityPoolId"
+            ]
+          }
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-usemeru-dev-170534-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
+        "logicalId": "authuserPoolGroups"
+      }
+    }
+  }
+}
